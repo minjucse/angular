@@ -1,5 +1,5 @@
-var app;
-(function (app) {
+var App;
+(function (App) {
     var Student = /** @class */ (function () {
         function Student() {
         }
@@ -8,14 +8,18 @@ var app;
         };
         return Student;
     }());
-    app.Student = Student;
+    App.Student = Student;
     var DepartmentController = /** @class */ (function () {
         function DepartmentController() {
             var self = this;
             self.student = new Student();
         }
+        DepartmentController.prototype.display = function () {
+            this.information = this.student.getInfo();
+        };
         return DepartmentController;
     }());
-    app.DepartmentController = DepartmentController;
-})(app || (app = {}));
-//# sourceMappingURL=app.js.map
+    App.DepartmentController = DepartmentController;
+    angular.module('app').controller("DepartmentController", (DepartmentController));
+})(App || (App = {}));
+//# sourceMappingURL=DepartmentController.js.map
