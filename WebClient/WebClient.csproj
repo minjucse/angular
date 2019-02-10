@@ -80,6 +80,8 @@
     <Content Include="Scripts\angular.min.js" />
     <Content Include="Scripts\angular.min.js.map" />
     <Content Include="Web.config" />
+    <TypeScriptCompile Include="App\Department\DepartmentService.ts" />
+    <TypeScriptCompile Include="App\Department\Model.ts" />
     <TypeScriptCompile Include="App\Home\HomeController.ts" />
     <TypeScriptCompile Include="Scripts\typings\angular-ui-router\index.d.ts" />
     <TypeScriptCompile Include="Scripts\typings\angularjs\angular-animate.d.ts" />

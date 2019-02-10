@@ -1,1 +1,15 @@
-﻿
+﻿<table>
+    <thead>
+        <tr>
+            <th>Name</th>
+            <th>Short Name</th>
+            <th>Detail</th>
+        </tr>
+    </thead>
+    <tr ng-repeat="d in vm.departments">
+        <td>{{d.name}}</td>
+        <td>{{d.shortName}}</td>
+        <td>{{d.details}}</td>
+       
+    </tr>
+</table>

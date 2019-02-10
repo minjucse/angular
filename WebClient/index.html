@@ -1,21 +1,23 @@
 ﻿<!DOCTYPE html>
 <html  ng-app="app">
-<head>
-    <meta charset="utf-8" />
-    <title></title>
-    <!--<script src="Scripts/angular.js"></script>-->
-    <script src="Scripts/angular.min.js"></script>
-    <script src="Scripts/angular-ui-router.min.js"></script>
-</head>
-<body>
-    <button>Get</button>
-    <!--app files-->
-    <script src="App/App.Config.js"></script>
-    <script src="Scripts/angular-ui-router.min.js"></script>
+    <head>
+        <meta charset="utf-8" />
+        <title></title>
+        <!--<script src="Scripts/angular.js"></script>-->
+        <script src="Scripts/angular.min.js"></script>
+        <script src="Scripts/angular-ui-router.min.js"></script>
+    </head>
+    <body>
 
-    <!--Controller files-->
-    <script src="App/Home/HomeController.js"></script>
-    <script src="App/Department/DepartmentController.js"></script>
+        <div ui-view></div>
 
-</body>
+        <!--app files-->
+        <script src="App/App.Config.js"></script>
+        <script src="Scripts/angular-ui-router.min.js"></script>
+
+        <!--Controller files-->
+        <script src="App/Home/HomeController.js"></script>
+        <script src="App/Department/DepartmentController.js"></script>
+
+    </body>
 </html>

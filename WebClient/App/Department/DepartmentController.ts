@@ -1,26 +1,54 @@
 ﻿module App {
-    export class Student {
-        name: string;
-        phone: string;
-
-        getInfo(): string {
-            return this.name + " " + this.phone;
-        }
-    }
-
+    
     export class DepartmentController {
-        student: Student;
-        information: string;
 
-        constructor() {
+        department: Department;
+        departmentService: DepartmentService;
+
+        static $inject = ["DepartmentService"];
+
+        constructor(departmentService: DepartmentService) {
+
             let self = this;
-            self.student = new Student();
+
+            self.department = new Department();
+            self.departmentService = departmentService;
+
+          console.log("I am in Department");  
         }
 
-        display(): void {
-            this.information = this.student.getInfo();
+        save() :void {
+            this.departmentService.departments.push(this.department);
+            this.department = new Department();
         }
+
+        reset(): void {
+
+            this.department = new Department();
+        }
+        
     }
 
     angular.module('app').controller("DepartmentController", (DepartmentController) as any);
+
+    export class DepartmentsController {
+
+        departments: Department[];
+        departmentService: DepartmentService;
+
+        static $inject = ["DepartmentService"];
+
+        constructor(departmentService: DepartmentService) {
+
+            let self = this;
+
+            self.departmentService = departmentService;
+            self.departments = self.departmentService.departments;
+
+            console.log("I am in Departments");  
+        }
+
+    }
+
+    angular.module('app').controller("DepartmentsController", (DepartmentsController) as any);
 }
